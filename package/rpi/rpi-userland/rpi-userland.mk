@@ -3,10 +3,9 @@
 # rpi-userland
 #
 #############################################################
-RPI_USERLAND_VERSION = local
-#RPI_USERLAND_SITE = git://github.com/raspberrypi/userland.git
-RPI_USERLAND_SITE = /home/rb/src/raspberrypi/userland
-RPI_USERLAND_SITE_METHOD = local
+RPI_USERLAND_VERSION = 9852ce28826889e50c4d6786b942f51bccccac54
+RPI_USERLAND_SITE = https://github.com/raspberrypi/userland/archive
+RPI_USERLAND_SOURCE = 9852ce28826889e50c4d6786b942f51bccccac54.tar.gz
 RPI_USERLAND_INSTALL_TARGET = YES
 
 define RPI_USERLAND_INSTALL_TARGET_CMDS
