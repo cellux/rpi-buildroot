@@ -15,4 +15,4 @@ make
 # 
 ```
 
-The resulting root filesystem can be found in output/images/rootfs.tar.gz
+The resulting root filesystem can be found in `output/images/rootfs.tar.gz`
