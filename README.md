@@ -7,12 +7,19 @@ git clone https://github.com/cellux/rpi-buildroot.git
 wget http://buildroot.uclibc.org/downloads/buildroot-2012.11.1.tar.gz
 tar xvzf buildroot-2012.11.1.tar.gz
 cd buildroot-2012.11.1
-for p in board/rpi package/rpi package/luajit/luajit-hardfp.patch; do
+# create symlinks for add-on packages
+for p in board/rpi package/rpi; do
   ln -s $(readlink -f ../rpi-buildroot/$p) $p
 done
+# replace customized packages with our versions
+for p in luajit; do
+  rm -rf package/$p
+  ln -s $(readlink -f ../rpi-buildroot/package/$p) package/$p
+done
+# install customized buildroot config
 cp ../rpi-buildroot/.config .
+# create root filesystem
 make
-# 
 ```
 
-The resulting root filesystem can be found in `output/images/rootfs.tar.gz`
+The result may be found in `output/images/rootfs.tar.gz`
