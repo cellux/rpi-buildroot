@@ -3,7 +3,7 @@
 (warning: this is work in progress)
 
 ```bash
-git clone http://github.com/cellux/rpi-buildroot.git
+git clone https://github.com/cellux/rpi-buildroot.git
 wget http://buildroot.uclibc.org/downloads/buildroot-2012.11.1.tar.gz
 tar xvzf buildroot-2012.11.1.tar.gz
 cd buildroot-2012.11.1
