@@ -3,7 +3,11 @@
 (warning: this is work in progress)
 
 ```bash
+# create folder for ccache and dl directories
+mkdir $HOME/.buildroot
+# clone repo
 git clone https://github.com/cellux/rpi-buildroot.git
+# download and extract buildroot
 wget http://buildroot.uclibc.org/downloads/buildroot-2012.11.1.tar.gz
 tar xvzf buildroot-2012.11.1.tar.gz
 cd buildroot-2012.11.1
@@ -19,7 +23,7 @@ done
 # install customized buildroot config
 cp ../rpi-buildroot/.config .
 # create root filesystem
-make
+make clean all
 ```
 
-The result may be found in `output/images/rootfs.tar.gz`
+The resulting root fs may be found in `output/images/rootfs.tar.gz`
