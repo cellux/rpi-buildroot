@@ -1,0 +1,4 @@
+menu "Raspberry Pi"
+source "package/rpi/rpi-userland/Config.in"
+source "package/rpi/libuv/Config.in"
+endmenu

@@ -1,0 +1,24 @@
+vcos_backtrace.c: make vcos_backtrace_self() a NOP (backtrace not supported in uclibc)
+
+signed-off-by clx <cellux@omkamra.hu>
+
+--- userland.orig/interface/vcos/glibc/vcos_backtrace.c
++++ userland/interface/vcos/glibc/vcos_backtrace.c
+@@ -26,7 +26,7 @@
+ */
+ 
+ #include <interface/vcos/vcos.h>
+-#ifdef __linux__
++#ifdef __backtrace__
+ #include <execinfo.h>
+ #endif
+ #include <stdio.h>
+@@ -35,7 +35,7 @@
+ 
+ void vcos_backtrace_self(void)
+ {
+-#ifdef __linux__
++#ifdef __backtrace__
+    void *stack[64];
+    int depth = backtrace(stack, sizeof(stack)/sizeof(stack[0]));
+    char **names = backtrace_symbols(stack, depth);
