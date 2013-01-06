@@ -1,22 +1,31 @@
-vcos_backtrace.c: make vcos_backtrace_self() a NOP (backtrace not supported in uclibc)
-
---- userland.orig/interface/vcos/glibc/vcos_backtrace.c
-+++ userland/interface/vcos/glibc/vcos_backtrace.c
-@@ -26,7 +26,7 @@
+--- userland/interface/vcos/glibc/vcos_backtrace.c	2013-01-06 21:19:45.642055469 +0100
++++ /home/rb/src/buildroot/output/build/rpi-userland-9852ce28826889e50c4d6786b942f51bccccac54/interface/vcos/glibc/vcos_backtrace.c	2013-01-06 21:17:55.592626490 +0100
+@@ -26,16 +26,19 @@
  */
  
  #include <interface/vcos/vcos.h>
 -#ifdef __linux__
 +#ifdef __GLIBC__
++#ifndef __UCLIBC__
  #include <execinfo.h>
  #endif
++#endif
  #include <stdio.h>
-@@ -35,7 +35,7 @@
+ #include <stdlib.h>
+ #include <sys/types.h>
  
  void vcos_backtrace_self(void)
  {
 -#ifdef __linux__
 +#ifdef __GLIBC__
++#ifndef __UCLIBC__
     void *stack[64];
     int depth = backtrace(stack, sizeof(stack)/sizeof(stack[0]));
     char **names = backtrace_symbols(stack, depth);
+@@ -49,5 +52,6 @@
+       free(names);
+    }
+ #endif
++#endif
+ }
+ 
