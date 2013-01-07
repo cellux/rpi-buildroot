@@ -41,7 +41,7 @@ cp ../rpi-buildroot/.config .
 # configure (optional)
 make menuconfig
 
-# configure command line parameters  for the Linux kernel
+# configure command line parameters for the Linux kernel
 # (see BR2_PACKAGE_RPI_CONFIG_CMDLINE variable in .config)
 
 # create root filesystem
