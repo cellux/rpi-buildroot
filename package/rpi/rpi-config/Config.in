@@ -4,3 +4,9 @@ config BR2_PACKAGE_RPI_CONFIG
 	  Heavily commented Raspberry Pi config file
 	  
 	  https://github.com/Evilpaul/RPi-config
+
+config BR2_PACKAGE_RPI_CONFIG_CMDLINE
+	string "Linux kernel command line"
+	default "dwc_otg.lpm_enable=0 console=tty1 elevator=deadline rootwait ip=dhcp root=/dev/mmcblk0p2 rootfstype=ext4"
+	help
+	  This string be written to /boot/cmdline.txt
