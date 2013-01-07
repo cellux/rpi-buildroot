@@ -15,13 +15,14 @@ cd buildroot-2012.11.1
 for p in board/rpi package/rpi; do
   ln -s $(readlink -f ../rpi-buildroot/$p) $p
 done
-# replace customized packages with our versions
-for p in luajit; do
-  rm -rf package/$p
-  ln -s $(readlink -f ../rpi-buildroot/package/$p) package/$p
-done
+# override packages which have been customized
+cat <<EOT >local.mk
+LUAJIT_OVERRIDE_SRCDIR = $(readlink -f ../rpi-buildroot/package/luajit)
+EOT
 # install customized buildroot config
 cp ../rpi-buildroot/.config .
+# configure (optional)
+make menuconfig
 # create root filesystem
 make clean all
 ```
