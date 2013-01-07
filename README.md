@@ -9,7 +9,7 @@ mkdir $HOME/.buildroot
 
 # create a temp directory for this build (may be anywhere)
 mkdir -p /tmp/buildroot
-cd tmp/buildroot
+cd /tmp/buildroot
 
 # clone this repo
 git clone https://github.com/cellux/rpi-buildroot.git
