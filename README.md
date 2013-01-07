@@ -20,9 +20,10 @@ for p in board/rpi package/rpi; do
 done
 
 # override packages which have been customized
-cat <<EOT >local.mk
-LUAJIT_OVERRIDE_SRCDIR = $(readlink -f ../rpi-buildroot/package/luajit)
-EOT
+for p in luajit; do
+  rm -rf package/$p
+  ln -s $(readlink -f ../rpi-buildroot/package/$p) package/$p
+done
 
 # add the following line above the last 'endmenu' in package/Config.in:
 source "package/rpi/Config.in"
