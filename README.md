@@ -2,6 +2,8 @@
 
 (warning: this is work in progress)
 
+The following commands should be executed as an ordinary user (NOT root):
+
 ```bash
 # create folder for ccache and dl directories
 # (must be at this location, the buildroot config refers to it)
@@ -38,6 +40,9 @@ cp ../rpi-buildroot/.config .
 
 # configure (optional)
 make menuconfig
+
+# configure command line parameters  for the Linux kernel
+# (see BR2_PACKAGE_RPI_CONFIG_CMDLINE variable in .config)
 
 # create root filesystem
 make clean all
