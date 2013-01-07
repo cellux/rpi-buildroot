@@ -19,6 +19,8 @@ done
 cat <<EOT >local.mk
 LUAJIT_OVERRIDE_SRCDIR = $(readlink -f ../rpi-buildroot/package/luajit)
 EOT
+# add the following line above the last 'endmenu' in package/Config.in:
+source "package/rpi/Config.in"
 # install customized buildroot config
 cp ../rpi-buildroot/.config .
 # configure (optional)
