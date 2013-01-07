@@ -14,7 +14,7 @@ wget http://buildroot.uclibc.org/downloads/buildroot-2012.11.1.tar.gz
 tar xvzf buildroot-2012.11.1.tar.gz
 cd buildroot-2012.11.1
 
-# create symlinks for add-on packages
+# create symlinks for board-specific scripts and add-on packages
 for p in board/rpi package/rpi; do
   ln -s $(readlink -f ../rpi-buildroot/$p) $p
 done
