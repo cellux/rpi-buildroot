@@ -6,7 +6,11 @@
 # create folder for ccache and dl directories
 mkdir $HOME/.buildroot
 
-# clone repo
+# create a temp directory for this build
+mkdir -p /tmp/buildroot
+cd tmp/buildroot
+
+# clone this repo
 git clone https://github.com/cellux/rpi-buildroot.git
 
 # download and extract buildroot
@@ -25,7 +29,7 @@ for p in luajit; do
   ln -s $(readlink -f ../rpi-buildroot/package/$p) package/$p
 done
 
-# add the following line above the last 'endmenu' in package/Config.in:
+# add the following stanza above the last 'endmenu' line in package/Config.in:
 source "package/rpi/Config.in"
 
 # install customized buildroot config
