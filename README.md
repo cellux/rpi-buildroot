@@ -43,4 +43,11 @@ make menuconfig
 make clean all
 ```
 
-The resulting root fs may be found in `output/images/rootfs.tar.gz`
+The resulting files are:
+
+* `output/images/bootfs.tar.gz`
+* `output/images/rootfs.tar.gz`
+
+This first one should be extracted to the first (FAT32) partition of the SD
+card, the second to the root partition (wherever it is).
+
