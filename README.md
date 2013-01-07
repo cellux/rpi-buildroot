@@ -7,7 +7,7 @@
 # (must be at this location, the buildroot config refers to it)
 mkdir $HOME/.buildroot
 
-# create a temp directory for this build (may be anywhere)
+# create a temp directory for build (may be anywhere)
 mkdir -p /tmp/buildroot
 cd /tmp/buildroot
 
