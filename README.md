@@ -45,6 +45,9 @@ make menuconfig
 # (see BR2_PACKAGE_RPI_CONFIG_CMDLINE variable in .config)
 
 # create root filesystem
+#
+# (warning: this step will download about 1 GB of
+# packages and may burn the CPU for several hours)
 make clean all
 ```
 
