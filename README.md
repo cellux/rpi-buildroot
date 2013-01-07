@@ -4,9 +4,10 @@
 
 ```bash
 # create folder for ccache and dl directories
+# (must be at this location, the buildroot config refers to it)
 mkdir $HOME/.buildroot
 
-# create a temp directory for this build
+# create a temp directory for this build (may be anywhere)
 mkdir -p /tmp/buildroot
 cd tmp/buildroot
 
