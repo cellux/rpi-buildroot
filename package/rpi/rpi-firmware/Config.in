@@ -1,0 +1,8 @@
+config BR2_PACKAGE_RPI_FIRMWARE
+	bool "Raspberry Pi GPU firmware + boot files"
+	help
+	  If you select this, you'll get a bootfs.tar.gz in output/images
+	  with a filesystem ready to be written to the first partition
+	  of the Raspberry Pi SD card.
+	  
+	  https://github.com/raspberrypi/firmware

@@ -1,0 +1,6 @@
+config BR2_PACKAGE_RPI_CONFIG
+	bool "Raspberry Pi config.txt (for /boot)"
+	help
+	  Heavily commented Raspberry Pi config file
+	  
+	  https://github.com/Evilpaul/RPi-config
