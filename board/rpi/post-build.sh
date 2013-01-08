@@ -1,11 +1,8 @@
 TARGETDIR=$1
 BR_ROOT=$PWD
 
-# create kernel image in the format required by the Pi boot loader
-( cd $BR_ROOT/output/build/rpi-tools-*/mkimage
-  python imagetool-uncompressed.py $BR_ROOT/output/images/zImage
-  mv kernel.img $BR_ROOT/output/staging/boot
-)
+# copy kernel image to /boot
+install -T -m 0644 $BR_ROOT/output/images/zImage $BR_ROOT/output/staging/boot/kernel.img
 
 # create boot.tar.gz
 tar -C $BR_ROOT/output/staging/boot -cvzf $BR_ROOT/output/images/bootfs.tar.gz --owner 0 --group 0 .

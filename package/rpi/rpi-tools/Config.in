@@ -1,9 +1,0 @@
-config BR2_PACKAGE_RPI_TOOLS
-	bool "Raspberry Pi tools (for mkimage)"
-	help
-	  Raspberry Pi tools
-	  
-	  Contains imagetool-uncompressed.py, which is needed
-	  for creation of the kernel image.
-	  
-	  https://github.com/raspberrypi/tools

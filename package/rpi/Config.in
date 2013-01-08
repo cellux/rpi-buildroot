@@ -1,7 +1,6 @@
 menu "Raspberry Pi"
 source "package/rpi/rpi-config/Config.in"
 source "package/rpi/rpi-firmware/Config.in"
-source "package/rpi/rpi-tools/Config.in"
 source "package/rpi/rpi-userland/Config.in"
 source "package/rpi/libuv/Config.in"
 endmenu
