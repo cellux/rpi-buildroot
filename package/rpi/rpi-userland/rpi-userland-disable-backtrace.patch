@@ -1,5 +1,5 @@
---- userland/interface/vcos/glibc/vcos_backtrace.c	2013-01-06 21:19:45.642055469 +0100
-+++ /home/rb/src/buildroot/output/build/rpi-userland-9852ce28826889e50c4d6786b942f51bccccac54/interface/vcos/glibc/vcos_backtrace.c	2013-01-06 21:17:55.592626490 +0100
+--- userland.old/interface/vcos/glibc/vcos_backtrace.c	2013-01-06 21:19:45.642055469 +0100
++++ userland.new/interface/vcos/glibc/vcos_backtrace.c	2013-01-06 21:17:55.592626490 +0100
 @@ -26,16 +26,19 @@
  */
  
