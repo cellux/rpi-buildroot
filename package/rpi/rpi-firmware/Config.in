@@ -6,3 +6,10 @@ config BR2_PACKAGE_RPI_FIRMWARE
 	  of the Raspberry Pi SD card.
 	  
 	  https://github.com/raspberrypi/firmware
+
+config BR2_PACKAGE_RPI_FIRMWARE_CMDLINE
+	string "Linux kernel command line"
+	default "dwc_otg.lpm_enable=0 console=tty1 elevator=deadline rootwait ip=dhcp root=/dev/mmcblk0p2 rootfstype=ext4"
+	help
+	  String to be written to /boot/cmdline.txt
+

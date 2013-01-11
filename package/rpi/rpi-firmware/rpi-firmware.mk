@@ -13,6 +13,7 @@ define RPI_FIRMWARE_INSTALL_STAGING_CMDS
 	$(INSTALL) -m 0644 $(@D)/boot/bootcode.bin $(STAGING_DIR)/boot
 	$(INSTALL) -m 0644 $(@D)/boot/fixup.dat $(STAGING_DIR)/boot
 	$(INSTALL) -m 0644 $(@D)/boot/start.elf $(STAGING_DIR)/boot
+	echo "$(call qstrip,$(BR2_PACKAGE_RPI_FIRMWARE_CMDLINE))" > $(STAGING_DIR)/boot/cmdline.txt
 endef
 
 $(eval $(generic-package))
