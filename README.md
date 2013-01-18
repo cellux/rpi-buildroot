@@ -1,7 +1,5 @@
 # Buildroot add-on for building a Raspberry Pi root filesystem
 
-(warning: this is work in progress)
-
 The following commands should be executed as an ordinary user (NOT root):
 
 ```bash
