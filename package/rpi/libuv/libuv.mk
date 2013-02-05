@@ -3,7 +3,7 @@
 # libuv
 #
 #############################################################
-LIBUV_VERSION = node-v0.9.4
+LIBUV_VERSION = node-v0.9.8
 LIBUV_SITE = https://github.com/joyent/libuv/archive
 LIBUV_SOURCE = $(LIBUV_VERSION).tar.gz
 

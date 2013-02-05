@@ -3,7 +3,7 @@
 # rpi-firmware
 #
 #############################################################
-RPI_FIRMWARE_VERSION = ffbb918fd46f1b0b687a474857b370f24f71989d
+RPI_FIRMWARE_VERSION = efc9c98fa3413e3f9e71273012917b8918d98444
 RPI_FIRMWARE_SITE = https://github.com/raspberrypi/firmware/archive
 RPI_FIRMWARE_SOURCE = $(RPI_FIRMWARE_VERSION).tar.gz
 RPI_FIRMWARE_INSTALL_STAGING = YES
