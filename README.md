@@ -1,5 +1,7 @@
 # Buildroot add-on for building a Raspberry Pi root filesystem
 
+Note: the 2015.05 release of Buildroot includes support for Raspberry Pi (all variants) which makes this project unnecessary. The blog post detailing how it works might be still interesting, although it's rather outdated. If you want to build your own rootfs/bootfs, I recommend using Buildroot directly.
+
 The following commands should be executed as an ordinary user (NOT root):
 
 ```bash
